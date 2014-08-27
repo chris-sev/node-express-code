@@ -3,6 +3,6 @@
 	"main": "server.js",
 	"dependencies": {
 		"express": "~4.8.5",
-		"ejs": ""
+		"ejs": "~1.0.0"
 	}
 }
