@@ -1,0 +1,8 @@
+{
+	"name": "node-express-site",
+	"main": "server.js",
+	"dependencies": {
+		"express": "~4.8.5",
+		"ejs": ""
+	}
+}
