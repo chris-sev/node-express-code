@@ -13,9 +13,9 @@ app.use(express.static(__dirname + '/public'));
 // ROUTES ===========================
 // ==================================
 // use res.render to load up an ejs view file
-// index page 
+// index/home page 
 app.get('/', function(req, res) {
-	res.render('./pages/home');
+	res.render('pages/home');
 });
 
 // about page 
@@ -24,11 +24,11 @@ app.get('/about', function(req, res) {
 });
 
 // contact page 
-app.get('/about', function(req, res) {
+app.get('/contact', function(req, res) {
 	res.render('pages/contact');
 });
 
 // START THE SERVER ================
 // =================================
 app.listen(8080);
-console.log('8080 is the magic port');
+console.log('8080 is the magic port!');
