@@ -17,13 +17,24 @@
 					<h1>About Page</h1>
 					<p>This is my first Node and Express home page!</p>
 
-					<img src="img/city.jpg">
+					<h2>Superheroes</h2>
+
+					<table class="table table-bordered table-striped">
+						<tbody>
+							<% superheroes.forEach(function(superhero) { %>
+							<tr>
+								<td><%= superhero.name %></td>
+								<td><%= superhero.alias %></td>
+							</tr>
+							<% }); %>
+						</tbody>
+					</table>
+
+					<img src="img/raspberries.jpg" alt="Food!">
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<div class="well">
-					<h3>Sidebar!</h3>
-				</div>
+				<% include ../partials/sidebar %>	
 			</div>
 		</div>
 	</main>
