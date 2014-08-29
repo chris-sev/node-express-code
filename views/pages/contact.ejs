@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="jumbotron text-center">
+			<h1>Contact Page</h1>
+			<p>Fill out the contact form if you can get past the bear!</p>
+
+			<% if (active) { %>				
+			<h2>We're Good to Go!</h2>
+			<% } %>
+
+			<img src="img/bear.jpg" alt="Bear in Your Face">
+		</div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+
+</body>
+</html>

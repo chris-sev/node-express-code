@@ -16,19 +16,31 @@ app.use(express.static(__dirname + '/public'));
 // ROUTES ===========================
 // ==================================
 // use res.render to load up an ejs view file
-// index page 
+// index/home page 
 app.get('/', function(req, res) {
-	res.render('./pages/home');
+	res.render('./pages/home', {
+		name: 'John Doe'
+	});
 });
 
 // about page 
 app.get('/about', function(req, res) {
-	res.render('pages/about');
+	var people = [
+		{ name: 'Bruce Wayne', alias: 'Batman' },
+		{ name: 'Clark Kent', alias: 'Superman' },
+		{ name: 'Scott Lang', alias: 'Ant Man' }
+	];
+
+	res.render('pages/about', {
+		people: people
+	});
 });
 
 // contact page 
-app.get('/about', function(req, res) {
-	res.render('pages/contact');
+app.get('/contact', function(req, res) {
+	res.render('pages/contact', {
+		active: true
+	});
 });
 
 // START THE SERVER ================
